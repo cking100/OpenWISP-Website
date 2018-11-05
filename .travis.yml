@@ -1,0 +1,32 @@
+language: node_js, python
+sudo: false
+
+cache: npm, pip
+
+node_js:
+  - "7"
+
+python:
+  -"3.5"
+
+
+before_install:
+  - npm i -g npm@version-number
+  - npm install -g jshint
+  - jshint ./js/*.js
+  - npm install -g stylelint
+  - pip install html-linter
+  - stylelint "css/*.css"
+  - html_lint.py *.html
+
+install:
+  - 
+
+before_script:
+  
+# command to run tests
+script:
+  
+  
+after_success:
+  
